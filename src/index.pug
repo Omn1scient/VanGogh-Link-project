@@ -1,0 +1,55 @@
+extends html/base
+
+block variables
+	- let title = 'Главная'
+	- var products = [{ title: 'Аква - Ис1', imageSrc: 'img/content/product-photo.png', description: 'Ингибитор осадкообразования (антискалант) для обратного осмоса, ингибитор коррозии' }]
+	- var numCards = 5;
+
+block content
+	section.product-cards.section-padding
+		.container
+			h1.product-cards-title.section-title Каталог реагентов
+		
+			.product-cards__checkbox-filter.checkbox-filter
+				.checkbox-filter__checkbox.checkbox
+					label.custom-checkbox-label Ингибиторы осадкообразования (антискаланты)
+						input(type="checkbox")
+						span.checkmark
+
+				.checkbox-filter__checkbox.checkbox
+					label.custom-checkbox-label Реагенты для промывки мембран
+						input(type="checkbox")
+						span.checkmark
+
+				.checkbox-filter__checkbox.checkbox
+					label.custom-checkbox-label Реагенты для консервации мембран
+						input(type="checkbox")
+						span.checkmark
+							
+			.product-cards__catalog.catalog-gutter
+				- for (var i = 0; i < numCards; i++)
+					.product-cards__product-card.product-card
+						.product-card__title #{products[0].title}
+						.product-card__image
+							img(src=products[0].imageSrc, alt=products[0].title)
+						p.product-card__text #{products[0].description}
+						.product-card__btn-wrap
+							a.product-card__btn.btn Выбрать объем
+
+			nav.product-cards__pagination.pagination
+				ul#paginationList.pagination__list
+					li.pagination__item.prev.hidden
+						a.pagination__link(href='#' aria-label='Назад') 
+					li.pagination__item.active
+						a.pagination__link(href='#' aria-label='Текущая') 1
+					li.pagination__item
+						a.pagination__link(href='#' aria-label='Текущая') 2
+					li.pagination__item.between
+						a.pagination__link(href='#' aria-label='Текущая') ...
+					li.pagination__item
+						a.pagination__link(href='#' aria-label='Текущая') 88
+					li.pagination__item
+						a.pagination__link(href='#' aria-label='Текущая') 89
+					li.pagination__item.next
+						a.pagination__link(href='#' aria-label='Вперед')
+			

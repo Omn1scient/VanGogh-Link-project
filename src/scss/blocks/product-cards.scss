@@ -1,0 +1,23 @@
+.product-cards__checkbox-filter {
+  margin-bottom: -20px;
+}
+
+.product-cards__catalog {
+  margin-top: 60px;
+
+  @media (min-width: 992px) {
+    margin-top: 12px;
+  }
+}
+
+.product-cards__pagination {
+  margin-top: 76px;
+
+  @media (min-width: 576px) {
+    margin-top: 44px;
+  }
+
+  @media (min-width: 992px) {
+    margin-top: 56px;
+  }
+}

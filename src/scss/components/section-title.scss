@@ -1,0 +1,13 @@
+.section-title {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 22px;
+  line-height: 38px;
+  margin-bottom: 15px;
+  letter-spacing: 0;
+  color: $text-title;
+
+  @media (min-width: 992px) {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+}

@@ -1,0 +1,25 @@
+.btn {
+  display: inline-flex;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  padding: 16px 36px 14px;
+  text-decoration: none;
+  background-color: $btn-bg;
+  color: $btn-text;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 18px;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.12);
+  font-weight: 700;
+
+  &:hover, &:active {
+    color: $btn-text-hover;
+    background-color: $btn-bg-hover;
+  }
+
+  @media (min-width: 992px) {
+    font-weight: 400;
+  }
+}

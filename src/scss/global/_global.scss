@@ -1,0 +1,111 @@
+@import "../colors/colors";
+
+a, button, input[type="button"] {
+  transition: $transition;
+
+  &:hover {
+    transition: $transition;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+main {
+  display: block;
+  overflow: hidden;
+}
+
+p, ul ,ol {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+p, ul, ol, h1, h2, h3, h4, h5, h6 {
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+img {
+  border-style: none;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+.list-style-none {
+  list-style: none;
+  padding-left: 0;
+}
+
+.visually-hidden,
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.section-padding {
+  padding: 42px 0;
+
+  @media (min-width: 992px) {
+    padding: 67px 0;
+  }
+}
+
+.container {
+  max-width: calc(100% - (100vw / 9.75));
+  --bs-gutter-x: calc(100vw / 19.5);
+  padding: 0 var(--bs-gutter-x);
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+    --bs-gutter-x: 40px;
+  }
+
+  @media (min-width: 1400px) {
+    max-width: 1280px;
+  }
+}
+
+.catalog-gutter {
+  margin: -40px;
+
+  & > * {
+    margin: 40px;
+  }
+
+  @media (min-width: 576px) {
+    margin: -10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    & > * {
+      margin: 10px;
+      width: calc(100% / 2 - 20px);
+    }
+  }
+
+  @media (min-width: 992px) {
+    margin: calc(-93px / 2);
+
+    & > * {
+      margin: calc(93px / 2);
+      width: calc(100% / 2 - 93px);
+    }
+  }
+}
